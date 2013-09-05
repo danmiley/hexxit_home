@@ -1,0 +1,93 @@
+---- Minecraft Crash Report ----
+// Sorry :(
+
+Time: 8/31/13 3:38 AM
+Description: Exception in server tick loop
+
+java.lang.IllegalArgumentException: Port value out of range: 255687
+	at java.net.ServerSocket.<init>(ServerSocket.java:197)
+	at net.minecraft.server.ServerListenThread.<init>(ServerListenThread.java:38)
+	at net.minecraft.server.dedicated.DedicatedServerListenThread.<init>(SourceFile:16)
+	at net.minecraft.server.dedicated.DedicatedServer.func_71197_b(DedicatedServer.java:123)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:431)
+	at net.minecraft.server.ThreadMinecraftServer.run(SourceFile:573)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.5.2
+	Operating System: Linux (amd64) version 3.4.43-43.43.amzn1.x86_64
+	Java Version: 1.6.0_24, Sun Microsystems Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Sun Microsystems Inc.
+	Memory: 1842663944 bytes (1757 MB) / 2076049408 bytes (1979 MB) up to 3113877504 bytes (2969 MB)
+	JVM Flags: 2 total; -Xmx3G -Xms2G
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Suspicious classes: FML and Forge are installed
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v7.51 FML v5.2.23.737 Minecraft Forge 7.8.1.737 60 mods loaded, 60 mods active
+	mcp{7.51} [Minecraft Coder Pack] (minecraft.jar) Unloaded->Constructed->Pre-initialized
+	FML{5.2.23.737} [Forge Mod Loader] (coremods) Unloaded->Constructed->Pre-initialized
+	Forge{7.8.1.737} [Minecraft Forge] (coremods) Unloaded->Constructed->Pre-initialized
+	CoFHFramework{1.5.2.5} [CoFH Framework] (coremods) Unloaded->Constructed->Pre-initialized
+	CodeChickenCore{0.8.7.3} [CodeChicken Core] (coremods) Unloaded->Constructed->Pre-initialized
+	NotEnoughItems{1.5.2.28} [Not Enough Items] (coremods) Unloaded->Constructed->Pre-initialized
+	ImmibisMicroblocks{55.0.7} [Immibis's Microblocks] (coremods) Unloaded->Constructed->Pre-initialized
+	mod_bspkrsCore{v2.09(1.5.2)} [bspkrsCore] ([1.5.2]bspkrsCorev2.09.zip) Unloaded->Constructed->Pre-initialized
+	CoFHCore{1.5.2.5} [CoFHCore] (CoFHCore-1.5.2.5.jar) Unloaded->Constructed->Pre-initialized
+	CoFHWorld{1.5.2.5} [CoFHWorld] (CoFHCore-1.5.2.5.jar) Unloaded->Constructed->Pre-initialized
+	TreeCapitator{Forge 1.5.2.r14} [TreeCapitator] ([1.5.2]TreeCapitator.Forge.1.5.2.r14.Uni.CoreMod.jar) Unloaded->Constructed->Pre-initialized
+	ImmibisMicroblocksInstallCheck{55.0.7} [Immibis's Microblocks (Checks for incorrect installation, ignore this)] (immibis-microblocks-55.0.7.jar) Unloaded->Constructed->Pre-initialized
+	DamageIndicatorsMod{2.7.0.1} [Damage Indicators] (1.5.2 DamageIndicators v2.7.0.1.zip) Unloaded->Constructed->Pre-initialized
+	AsgardShield_Core{2.0.4} [AsgardShield] (1.5.2AsgardShield_Core_2.0.4Forge.zip) Unloaded->Constructed->Pre-initialized
+	ASAddon_Hallowed{2.0.0} [AS Addon- Hallowed] (1.5.2ASAddonHallowed_v2.0.0Forge.zip) Unloaded->Constructed->Pre-initialized
+	HarkenScythe_Core{2.1.6} [HarkenScythe] (1.5.2HarkenScythe_v2.1.6Forge.zip) Unloaded->Constructed->Pre-initialized
+	ASAddon_HarkenScythe{2.0.0} [AS Addon- HarkenScythe] (1.5.2ASAddonHarkenScythe_v2.0.0Forge.zip) Unloaded->Constructed->Pre-initialized
+	ASAddon_NetherEnder{2.0.0} [AS Addon- Nether-Ender] (1.5.2ASAddonNetherEnder_v2.0.0Forge.zip) Unloaded->Constructed->Pre-initialized
+	ASAddon_ColorAPI{1.0.0} [ASAddon_ColorAPI] (1.5.2AsgardShield_Core_2.0.4Forge.zip) Unloaded->Constructed->Pre-initialized
+	Artifice{1.5.2R1.1.2} [Artifice] (Artifice-1.1.2-142.jar) Unloaded->Constructed->Pre-initialized
+	ArtificeCompat|Chisel{1.5.2R1.1.2} [Artifice Compat: Chisel] (Artifice-1.1.2-142.jar) Unloaded->Constructed->Pre-initialized
+	ArtificeCompat|EE3{1.5.2R1.1.2} [Artifice Compat: EE3] (Artifice-1.1.2-142.jar) Unloaded->Constructed->Pre-initialized
+	ArtificeCompat|Forestry{1.5.2R1.1.2} [Artifice Compat: Forestry] (Artifice-1.1.2-142.jar) Unloaded->Constructed->Pre-initialized
+	ArtificeCompat|MFR{1.5.2R1.1.2} [Artifice Compat: MFR] (Artifice-1.1.2-142.jar) Unloaded->Constructed->Pre-initialized
+	ArtificeCompat|Railcraft{1.5.2R1.1.2} [Artifice Compat: Railcraft] (Artifice-1.1.2-142.jar) Unloaded->Constructed->Pre-initialized
+	ArtificeCompat|Vanilla{1.5.2R1.1.2} [Artifice Compat: Vanilla] (Artifice-1.1.2-142.jar) Unloaded->Constructed->Pre-initialized
+	BattleTowers{1.3.4} [Battle Towers] (BattleTowers_1.5.2.zip) Unloaded->Constructed->Pre-initialized
+	BetterDungeons{1.8} [Better dungeons] (BetterDungeons.zip) Unloaded->Constructed->Pre-initialized
+	BiblioCraft{1.3.3} [BiblioCraft] (BiblioCraft[v1.3.3].zip) Unloaded->Constructed->Pre-initialized
+	DimDoors{1.5.2R1.4.1RC1} [Dimensional Doors] (DimensionalDoors-1.5.2R1.4.1RC1-194.zip) Unloaded->Constructed->Pre-initialized
+	eplus{1.15.4} [Enchanting Plus] (EnchantingPlus-1.15.4.jar) Unloaded->Constructed->Pre-initialized
+	ExtrabiomesXL{3.13.4} [ExtrabiomesXL] (ExtrabiomesXL-universal-1.5.2-3.13.4.jar) Unloaded->Constructed->Pre-initialized
+	hexxitgear{1.5.2R1.0} [Hexxit Gear] (HexxitGear-1.0-23.jar) Unloaded->Constructed->Pre-initialized
+	InfernalMobs{1.3.1} [Infernal Mobs] (InfernalMobs_1.5.2.zip) Unloaded->Constructed->Pre-initialized
+	Meteors{2.10.2} [Falling Meteors] (Meteors Mod V2.10.2.zip) Unloaded->Constructed->Pre-initialized
+	More Bows{1.5_v1} [More Bows mod] (More bows 1.5.2_2 Forge.jar) Unloaded->Constructed->Pre-initialized
+	LegendGear{1.5.2} [LegendGear] (NMcCoy-LegendGear-1.5.2.zip) Unloaded->Constructed->Pre-initialized
+	Natura{2.1.2} [Natura] (Natura_2.1.2.jar) Unloaded->Constructed->Pre-initialized
+	Natura|CompatMineFactoryReloaded{0.1} [Natura compat: MFR] (Natura_2.1.2.jar) Unloaded->Constructed->Pre-initialized
+	OffLawn{1.0} [offLawn] (OffLawn-1.5.1.zip) Unloaded->Constructed->Pre-initialized
+	ProjectZulu|Core{1.0.3.8} [Project Zulu Core] (ProjectZuluCompletev1.0.3.8.zip) Unloaded->Constructed->Pre-initialized
+	ProjectZulu|Blocks{1.0.3.8} [Project Zulu Block and Items] (ProjectZuluCompletev1.0.3.8.zip) Unloaded->Constructed->Pre-initialized
+	ProjectZulu|Dungeon{1.0.3.8} [Project Zulu Mobs] (ProjectZuluCompletev1.0.3.8.zip) Unloaded->Constructed->Pre-initialized
+	ProjectZulu|Mobs{1.0.3.8} [Project Zulu Mobs] (ProjectZuluCompletev1.0.3.8.zip) Unloaded->Constructed->Pre-initialized
+	ProjectZulu|World{1.0.3.8} [Project Zulu World] (ProjectZuluCompletev1.0.3.8.zip) Unloaded->Constructed->Pre-initialized
+	xreliquary{1.5.2} [Xeno's Reliquary] (Reliquary1.0.6d.zip) Unloaded->Constructed->Pre-initialized
+	rftl{1.0} [RottenFleshToLeather] (RottenFleshToLeather-1.5.1.zip) Unloaded->Constructed->Pre-initialized
+	AS_Ruins{10.3} [Ruins Spawning System] (Ruins_1.5.2.zip) Unloaded->Constructed->Pre-initialized
+	secretroomsmod{4.6.0} [SecretRoomsMod] (SecretRoomsMod-universal-4.6.0.283.zip) Unloaded->Constructed->Pre-initialized
+	SoulShards{1.0.16} [Soul Shards] (SoulShards-1.0.36-universal-srg.jar) Unloaded->Constructed->Pre-initialized
+	TConstruct{1.5.1_1.4.0} [Tinkers' Construct] (TConstruct_1.4.0.jar) Unloaded->Constructed->Pre-initialized
+	TConstruct|CompatMineFactoryReloaded{0.1} [TConstruct Compat: MFR] (TConstruct_1.4.0.jar) Unloaded->Constructed->Pre-initialized
+	WildCaves3{0.4.2} [Wild Caves 3] (WildCaves3-0.4.2.zip) Unloaded->Constructed->Pre-initialized
+	BetterStorage{0.6.2.23} [BetterStorage] ([1.5.2]BetterStorage_0.6.2.23.zip) Unloaded->Constructed->Pre-initialized
+	Backpack{1.12.13} [Backpack] (backpack-1.12.13-1.5.2.zip) Unloaded->Constructed->Pre-initialized
+	ChestTransporter{1.1.6} [Chest Transporter] (chestTransporter_1.1.6_Universal.zip) Unloaded->Constructed->Pre-initialized
+	ImmibisCore{55.1.6} [Immibis Core] (immibis-core-55.1.6.jar) Unloaded->Constructed->Pre-initialized
+	ObsidiPlates{1.5.0} [Obsidian Pressure Plates] (obsidiplates-1.5.2-universal-1.5.0.13.jar) Unloaded->Constructed->Pre-initialized
+	TwilightForest{1.18.1} [The Twilight Forest] (twilightforest-1.18.1.zip) Unloaded->Constructed->Pre-initialized
+	chococraft{2.8.8} [Torojima's ChocoCraft] (zzzChococraft_2.8.8.zip) Unloaded->Constructed->Pre-initialized
+	Profiler Position: N/A (disabled)
+	Is Modded: Definitely; Server brand changed to 'fml,forge'
+	Type: Dedicated Server (map_server.txt)

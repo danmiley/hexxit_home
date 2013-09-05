@@ -1,0 +1,23 @@
+timestamps:
+  login: 1378260756651
+  lastteleport: 1378137256029
+  logout: 1378260866994
+ipAddress: 98.207.152.213
+lastlocation:
+  world: DimensionalDoors/pocketDimID15
+  x: 321.7260610400355
+  y: -80.93875425845822
+  z: 284.0805616251621
+  yaw: 51.992218
+  pitch: -69.964165
+logoutlocation:
+  world: DIM-23
+  x: -822.6378776912787
+  y: 309.7638400651946
+  z: 974.933348428371
+  yaw: 87.574066
+  pitch: -63.0167
+mail:
+- 'Server: now have cheats activated on JMDiamondFest'
+nickname: scavenger
+afk: false

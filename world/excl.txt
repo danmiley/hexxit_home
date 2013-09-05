@@ -1,0 +1,1 @@
+excl=2;/home/ec2-user/hexn_mini/mods/resources/ruins/desert/Beacon.tml
